@@ -201,3 +201,7 @@ reneg-sec {{ config.reneg_sec }}
 {%- if config.tun_mtu is defined %}
 tun-mtu {{ config.tun_mtu }}
 {%- endif %}
+
+{%- if config.crl_verify is defined %}
+crl-verify {{ config.crl_verify }}
+{%- endif %}
