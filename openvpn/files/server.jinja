@@ -106,6 +106,14 @@ learn-address {{ config.learn_address }}
 client-to-client
 {%- endif %}
 
+{%- if config.sndbuf is defined %}
+sndbuf {{ config.sndbuf }}
+{%- endif %}
+
+{%- if config.rcvbuf is defined %}
+rcvbuf {{ config.rcvbuf }} 
+{%- endif %}
+
 {%- if config.duplicate_cn is defined and config.duplicate_cn == True %}
 duplicate-cn
 {%- endif %}
